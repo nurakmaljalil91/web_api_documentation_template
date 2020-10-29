@@ -1,13 +1,15 @@
 {
     "info": {
-        "_postman_id": "cd5fd546-29fe-4911-adca-6d7aeebb0e1f",
         "name": "Bursanews Web Api",
+        "version": "0.0.1",
         "description": "# Introduction\nThe Bursanews web api \n\n# Overview\nThe Bursanews web api \n\n# Authentication\nNo integrated\n\n# Error Codes\n404 Error code \n\n# Rate limit\nNot test yet",
-        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "baseUrl": "http://localhost:50598/"
     },
+    "overviews": {
+        "introduction": "This is the web api"
+    },
     "reference": [{
-            "title": "Show All News",
+            "title": "Get All News",
             "description": "Get the list of news",
             "url": "/news",
             "method": "GET",
@@ -15,7 +17,7 @@
             "dataParams": "",
             "successResponse": [{
                 "code": "200 OK",
-                "content": "<code class=\"grey lighten-3 green--text\">HTTP/1.1 200 OK \n Transfer - Encoding: chunked\nContent - Type: application / json;charset = utf - 8\nServer: Microsoft - IIS / 10.0\nX - Powered - By: ASP.NET\nDate: Tue,27 Oct 2020 08: 38: 16 GMT </code>"
+                "content": "<code class=\"grey lighten-3 green--text\">HTTP/1.1 200 OK <br>Transfer - Encoding: chunked<br>Content - Type: application / json;charset = utf - 8<br>Server: Microsoft - IIS / 10.0<br>X - Powered - By: ASP.NET<br>Date: Tue,27 Oct 2020 08: 38: 16 GMT </code>"
             }],
             "errorResponse": [{
                 "code": "400",
@@ -24,9 +26,26 @@
             "sampleCall": "curl -i http://localhost:50598/api/BursaNews/"
         },
         {
-            "title": "Show single News",
+            "title": "Get single News",
             "description": "Get a single news using newsid",
             "url": "/news/{newsid}",
+            "method": "GET",
+            "urlParams": "",
+            "dataParams": "",
+            "successResponse": [{
+                "code": "200 OK",
+                "content": ""
+            }],
+            "errorResponse": [{
+                "code": "400",
+                "content": ""
+            }],
+            "sampleCall": ""
+        },
+        {
+            "title": "Get News by Category",
+            "description": "Get list news using category",
+            "url": "/news/Category/{category}&take={take}",
             "method": "GET",
             "urlParams": "",
             "dataParams": "",
